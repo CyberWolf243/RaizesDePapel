@@ -28,17 +28,7 @@ SELECT ve.id_venda,
 	
 	-------------------------------------------------------------------------------------------
 	
-	MENU
-	-gestao de produtos -> gerenciamento de produtos
-	- pessoas -> pessoas
-	- vendas -> vendas
+	Paginas
 	
-	Fornecedor
-	-adicionar cnpj
-	
-	
-	Venda de produtos
-	
-	-selecionar cliente vai mudar para selecionar funcionario
-	
-	
+	-Retirar o Cliente
+	-Apagar Todos os rastros que estao como cliente e mudar para fornecedor
