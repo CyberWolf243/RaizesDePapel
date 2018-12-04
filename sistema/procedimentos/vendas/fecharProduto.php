@@ -1,5 +1,5 @@
 <?php 
-
+	// temp de "temporaria"
 	
 	session_start();
 	$index=$_POST['ind'];

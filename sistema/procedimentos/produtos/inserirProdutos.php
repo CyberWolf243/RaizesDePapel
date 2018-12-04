@@ -11,14 +11,14 @@
 	$nomeImg=$_FILES['imagem']['name'];
 	$urlArmazenamento=$_FILES['imagem']['tmp_name'];
 	$pasta='../../arquivos/';
-	$urlFinal=$pasta.$nomeImg;
+	$urlFinal=$pasta.$nomeImg; // urlfinal é a pasta de destino para onde vai ser enviada + o nome da imagem(a foto e o nome)
 
 	$dadosImg=array(
 		$_POST['categoriaSelect'],
 		$nomeImg,
 		$urlFinal
 					);
-
+  //move a nova imagem de produto do local onde estava para dentro da pasta arquivo(onde estao todas as fotos dos produtos)
 		if(move_uploaded_file($urlArmazenamento, $urlFinal)){
 				$idimagem=$obj->addImagem($dadosImg);
 

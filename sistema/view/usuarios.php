@@ -17,6 +17,8 @@ if(isset($_SESSION['usuario'])){
 			<h1>Administrar Usuários</h1>
 			<div class="row">
 				<div class="col-sm-4">
+                                    
+     <!-- FORMULARIO DA PAGINA DE GESTAO DE USUARIOS  -->
 					<form id="frmRegistro">
 						<label>Nome</label>
 						<input type="text" class="form-control input-sm" name="nome" id="nome">

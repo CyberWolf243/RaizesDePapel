@@ -44,11 +44,17 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id_categoria`, `id_usuario`, `nome_categoria`, `dataCaptura`) VALUES
-(3, 6, 'calça', '2018-05-17'),
-(4, 6, 'Bermudas', '2018-05-17'),
-(5, 6, 'tenis', '2018-05-17'),
-(6, 6, 'Sapatos', '2018-05-17'),
-(7, 6, 'Camisas', '2018-05-17');
+(3, 6, 'Romance', '2018-05-17'),
+(4, 6, 'Poemas', '2018-05-17'),
+(5, 6, 'Literatura estrangeira', '2018-05-17'),
+(6, 6, 'Biografias', '2018-05-17'),
+(7, 6, 'Aventura', '2018-05-17'),
+(8, 6, 'Contos', '2018-05-17'),
+(9, 6, 'Infantojuvenis', '2018-05-17'),
+(10, 6, 'Ficcao Cientifica', '2018-05-17'),
+(11, 6, 'Literatura Brasileira', '2018-05-17'),
+(13, 6, 'Drama', '2018-05-17'),
+(14, 6, 'Fantasia', '2018-05-17');
 
 -- --------------------------------------------------------
 
@@ -56,24 +62,7 @@ INSERT INTO `categorias` (`id_categoria`, `id_usuario`, `nome_categoria`, `dataC
 -- Estrutura da tabela `clientes`
 --
 
-CREATE TABLE `clientes` (
-  `id_cliente` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `sobrenome` varchar(100) NOT NULL,
-  `endereco` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `telefone` varchar(100) NOT NULL,
-  `cpf` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `clientes`
---
-
-INSERT INTO `clientes` (`id_cliente`, `id_usuario`, `nome`, `sobrenome`, `endereco`, `email`, `telefone`, `cpf`) VALUES
-(4, 6, 'Paula F', 'Santos', 'Rua A', 'paula@hotmail.com', '555555', '33333'),
-(5, 6, 'Hugo Vasconcelos', 'Freitas', 'Rua C', 'hugovasconcelosf', '988878', '8787878');
 
 -- --------------------------------------------------------
 
@@ -89,16 +78,16 @@ CREATE TABLE `fornecedores` (
   `endereco` varchar(150) NOT NULL,
   `email` varchar(100) NOT NULL,
   `telefone` varchar(100) NOT NULL,
-  `cpf` varchar(100) NOT NULL
+  `cnpj` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `fornecedores`
 --
 
-INSERT INTO `fornecedores` (`id_fornecedor`, `id_usuario`, `nome`, `sobrenome`, `endereco`, `email`, `telefone`, `cpf`) VALUES
+INSERT INTO `fornecedores` (`id_fornecedor`, `id_usuario`, `nome`, `sobrenome`, `endereco`, `email`, `telefone`, `cnpj`) VALUES
 (1, 6, 'Pedro Freitas', 'Vasconcelos', 'Rua 5', 'pedro@hotmail.com', '55555', '555555'),
-(3, 6, 'FÃ¡bio Freitas', 'Freitas', 'Rua D', 'fabio@hotmail.com', '3333333', '555555');
+(3, 6, 'Fabio Freitas', 'Freitas', 'Rua D', 'fabio@hotmail.com', '3333333', '555555');
 
 -- --------------------------------------------------------
 
@@ -119,11 +108,10 @@ CREATE TABLE `imagens` (
 --
 
 INSERT INTO `imagens` (`id_imagem`, `id_categoria`, `nome`, `url`, `dataUpload`) VALUES
-(4, 7, 'camisa social.jpg', '../../arquivos/camisa social.jpg', '2018-05-22'),
-(5, 7, 'camisa.jpg', '../../arquivos/camisa.jpg', '2018-05-22'),
-(6, 3, 'calca.jpg', '../../arquivos/calca.jpg', '2018-05-22'),
-(7, 5, 'tenis feminino.jpg', '../../arquivos/tenis feminino.jpg', '2018-05-22'),
-(8, 5, 'tenis.jpg', '../../arquivos/tenis.jpg', '2018-05-22');
+(4, 3, 'como-eu-era-antesde-voce-antes-de-voce.jpg', '../../arquivos/como-eu-era-antesde-voce-antes-de-voce.jpg', '2018-05-22'),
+(5, 14, 'harry-potter-camera-secreta.jpg', '../../arquivos/harry-potter-camera-secreta.jpg', '2018-05-22'),
+(6, 7, 'percy-jackson-os-olimpianos.jpg', '../../arquivos/percy-jackson-os-olimpianos.jpg', '2018-05-22'),
+(7, 13, 'quem-e-voce-alasca.jpg', '../../arquivos/quem-e-voce-alasca.jpg', '2018-05-22');
 
 -- --------------------------------------------------------
 
@@ -148,11 +136,10 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id_produto`, `id_categoria`, `id_imagem`, `id_usuario`, `nome`, `descricao`, `quantidade`, `preco`, `dataCaptura`) VALUES
-(4, 7, 4, 6, 'Camisa Social', 'Camisa Social Masculina Xt89587', 7, 90, '2018-05-22'),
-(5, 7, 5, 6, 'Camisa Barcelona', 'Camisa do Time do Barcelona Oficial', 0, 250, '2018-05-22'),
-(6, 3, 6, 6, 'Calça Masculina', 'Calça Masculina Marron', 13, 120, '2018-05-22'),
-(7, 5, 7, 6, 'Tenis Feminino', 'Tenis Sport Feminino ', 21, 80, '2018-05-22'),
-(8, 5, 8, 6, 'Tenis XT52', 'Tenis Unissex', 16, 95, '2018-05-22');
+(4, 7, 4, 6, 'Como eu era antes de Voce', 'Livro de romance', 7, 90, '2018-05-22'),
+(5, 7, 5, 6, 'Harry Potter', 'Livro de fantasia', 0, 250, '2018-05-22'),
+(6, 3, 6, 6, 'Percy Jackson', 'Livro de aventura', 13, 120, '2018-05-22'),
+(7, 5, 7, 6, 'quem e voce alasca', 'Livro de drama ', 21, 80, '2018-05-22');
 
 -- --------------------------------------------------------
 
@@ -174,8 +161,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `user`, `email`, `senha`, `dataCaptura`) VALUES
-(6, 'Hugo Freitas', 'hugofreitas', 'hugovasconcelosf@hotmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', '2018-05-17'),
-(7, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2018-05-17');
+(7, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2018-05-17'),
+(8, 'Julia', 'julia', 'julia@gmail.com', 'b43b0ad1e8108e7ab870d7a54feac93ae8b8600e', '2018-05-23');
 
 select * from usuarios;
 -- --------------------------------------------------------
@@ -186,7 +173,7 @@ select * from usuarios;
 
 CREATE TABLE `vendas` (
   `id_venda` int(11) NOT NULL,
-  `id_cliente` int(11) NOT NULL,
+  `id_fornecedor` int(11) NOT NULL,
   `id_produto` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `preco` float NOT NULL,
@@ -208,8 +195,7 @@ ALTER TABLE `categorias`
 --
 -- Indexes for table `clientes`
 --
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`id_cliente`);
+
 
 --
 -- Indexes for table `fornecedores`
@@ -245,11 +231,6 @@ ALTER TABLE `usuarios`
 ALTER TABLE `categorias`
   MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
---
--- AUTO_INCREMENT for table `clientes`
---
-ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `fornecedores`

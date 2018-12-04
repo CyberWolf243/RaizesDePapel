@@ -22,7 +22,7 @@ $dados=array(
 	$_POST['endereco'],
 	$_POST['email'],
 	$_POST['telefone'],
-	$_POST['cpf']
+	$_POST['cnpj']
 
 );
 

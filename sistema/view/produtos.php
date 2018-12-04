@@ -23,6 +23,8 @@ if(isset($_SESSION['usuario'])){
 			<h1>Produtos</h1>
 			<div class="row">
 				<div class="col-sm-4">
+                                    
+     <!-- FORMULARIO DA PAGINA DE PRODUTO  -->
 					<form id="frmProdutos" enctype="multipart/form-data">
 						<label>Categoria</label>
 						<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">

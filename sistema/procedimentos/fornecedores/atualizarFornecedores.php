@@ -9,7 +9,7 @@ require_once "../../classes/fornecedores.php";
 $obj = new fornecedores();
 
 
-
+// U de update 
 $dados=array(
 	$_POST['idfornecedorU'],
 	$_POST['nomeU'],
@@ -17,7 +17,7 @@ $dados=array(
 	$_POST['enderecoU'],
 	$_POST['emailU'],
 	$_POST['telefoneU'],
-	$_POST['cpfU']
+	$_POST['cnpjU']
 	
 
 );

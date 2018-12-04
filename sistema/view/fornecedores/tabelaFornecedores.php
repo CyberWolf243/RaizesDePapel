@@ -6,7 +6,7 @@ require_once "../../classes/conexao.php";
 	$c = new conectar();
 		$conexao=$c->conexao();
 
-	$sql = "SELECT id_fornecedor, nome, sobrenome, endereco, email, telefone, cpf FROM fornecedores";
+	$sql = "SELECT id_fornecedor, nome, sobrenome, endereco, email, telefone, cnpj FROM fornecedores";
 	$result = mysqli_query($conexao, $sql);
 
 ?>
@@ -20,7 +20,7 @@ require_once "../../classes/conexao.php";
 	 		<td>Endereço</td>
 	 		<td>Email</td>
 	 		<td>Telefone</td>
-	 		<td>CPF</td>
+	 		<td>cnpj</td>
 	 		<td>Editar</td>
 			<td>Excluir</td>
 	</tr>

@@ -11,7 +11,7 @@
 
  $sql="SELECT ve.id_venda,
 		ve.dataCompra,
-		ve.id_cliente,
+		ve.id_fornecedor,
 		pro.nome,
         pro.preco,
         pro.descricao
@@ -26,7 +26,7 @@ $result=mysqli_query($conexao,$sql);
 
 	$comp=$ver[0];
 	$data=$ver[1];
-	$idcliente=$ver[2];
+	$idfornecedor=$ver[2];
 
  ?>	
 
@@ -46,7 +46,7 @@ $result=mysqli_query($conexao,$sql);
  				<td>Comprovante: <?php echo $comp ?></td>
  			</tr>
  			<tr>
- 				<td>Cliente: <?php echo $objv->nomeCliente($idcliente); ?></td>
+ 				<td>Fornecedor: <?php echo $objv->nomeFornecedor($idfornecedor); ?></td>
  			</tr>
  		</table>
 
@@ -62,7 +62,7 @@ $result=mysqli_query($conexao,$sql);
  			<?php 
  			$sql="SELECT ve.id_venda,
 						ve.dataCompra,
-						ve.id_cliente,
+						ve.id_fornecedor,
 						pro.nome,
 				        pro.preco,
 				        pro.descricao,

@@ -5,7 +5,7 @@
  ?>
 
  <h4>Criar Venda</h4>
- <h4><strong><div id="nomeclienteVenda"></div></strong></h4>
+ <h4><strong><div id="nomefornecedorVenda"></div></strong></h4>
  <table class="table table-bordered table-hover table-condensed" style="text-align: center;">
  	<caption>
  		<span class="btn btn-success" onclick="criarVenda()"> Criar Venda
@@ -21,7 +21,7 @@
  	</tr>
  	<?php 
  	$total=0;//total da venda em dinheiro
- 	$cliente=""; //nome cliente
+ 	$fornecedor=""; //nome fornecedor
  		if(isset($_SESSION['tabelaComprasTemp'])):
  			$i=0;
  			foreach (@$_SESSION['tabelaComprasTemp'] as $key) {
@@ -48,7 +48,7 @@
  		$calc = $d[3] * $d[6];
  		$total=$total + $calc;
  		$i++;
- 		$cliente=$d[4];
+ 		$fornecedor=$d[4];
  	}
  	endif; 
  ?>
@@ -62,7 +62,7 @@
 
  <script type="text/javascript">
  	$(document).ready(function(){
- 		nome="<?php echo @$cliente ?>";
- 		$('#nomeclienteVenda').text("Nome de cliente: " + nome);
+ 		nome="<?php echo @$fornecedor ?>";
+ 		$('#nomefornecedorVenda').text("Nome de fornecedor: " + nome);
  	});
  </script>

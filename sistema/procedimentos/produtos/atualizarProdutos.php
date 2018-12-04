@@ -4,7 +4,8 @@
 	require_once "../../classes/produtos.php";
 
 	$obj= new produtos();
-
+        
+// U de update 
 $dados=array(
 		$_POST['idProduto'],
 	    $_POST['categoriaSelectU'],

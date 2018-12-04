@@ -10,17 +10,17 @@ require_once "../../classes/conexao.php";
 <div class="row">
 	<div class="col-sm-4">
 		<form id="frmVendasProdutos">
-			<label>Selecionar Cliente</label>
-			<select class="form-control input-sm" id="clienteVenda" name="clienteVenda">
+			<label>Selecionar Fornecedor</label>
+			<select class="form-control input-sm" id="fornecedorVenda" name="fornecedorVenda">
 				<option value="A">Selecionar</option>
-				<option value="0">Sem Clientes</option>
+				<option value="0">Sem Fornecedor</option>
 				<?php
-				$sql="SELECT id_cliente,nome,sobrenome 
-				from clientes";
+				$sql="SELECT id_fornecedor,nome,sobrenome 
+				from fornecedores";
 				$result=mysqli_query($conexao,$sql);
-				while ($cliente=mysqli_fetch_row($result)):
+				while ($fornecedor=mysqli_fetch_row($result)):
 					?>
-					<option value="<?php echo $cliente[0] ?>"><?php echo $cliente[1]." ".$cliente[2] ?></option>
+					<option value="<?php echo $fornecedor[0] ?>"><?php echo $fornecedor[1]." ".$fornecedor[2] ?></option>
 				<?php endwhile; ?>
 			</select>
 			<label>Produto</label>
@@ -181,7 +181,7 @@ require_once "../../classes/conexao.php";
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#clienteVenda').select2();
+		$('#fornecedorVenda').select2();
 		$('#produtoVenda').select2();
 
 	});

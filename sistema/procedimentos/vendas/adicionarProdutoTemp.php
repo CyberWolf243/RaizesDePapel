@@ -4,7 +4,7 @@
 	$c= new conectar();
 	$conexao=$c->conexao();
 
-	$idcliente=$_POST['clienteVenda'];
+	$idfornecedor=$_POST['fornecedorVenda'];
 	$idproduto=$_POST['produtoVenda'];
 	$descricao=$_POST['descricaoV'];
 	$quantidade=$_POST['quantidadeV'];
@@ -14,13 +14,13 @@
 
 
 	$sql="SELECT nome,sobrenome 
-			from clientes 
-			where id_cliente='$idcliente'";
+			from fornecedores 
+			where id_fornecedor='$idfornecedor'";
 	$result=mysqli_query($conexao,$sql);
 
 	$c=mysqli_fetch_row($result);
 
-	$ncliente=$c[0]." ".$c[1];
+	$nfornecedor=$c[0]." ".$c[1];
 
 	$sql="SELECT nome 
 			from produtos
@@ -33,18 +33,18 @@
 				$nomeproduto."||".
 				$descricao."||".
 				$preco."||".
-				$ncliente."||".
+				$nfornecedor."||".
 				$quantidade."||".
 				$quantV."||".
 				$quantV * $preco."||".
-				$idcliente;
+				$idfornecedor;
 
 	$_SESSION['tabelaComprasTemp'][]=$produto;
 
 
 
 
-	//ATUALIZAÇÃO DO ESTOQUE - FEITO NO FINAL DO CURSO
+	//ATUALIZAÇÃO DO ESTOQUE 
 	$quantNova = $quantidade - $quantV;
 	$sqlU = "UPDATE produtos SET quantidade = '$quantNova' where id_produto = '$idproduto' ";
 		mysqli_query($conexao,$sqlU);

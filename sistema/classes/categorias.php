@@ -1,7 +1,7 @@
 <?php 
 
 class categorias{
-	public function adicionarCategoria($dados){
+	public function adicionarCategoria($dados){ // essa function adiciona novas categorias ao site
 		$c = new conectar();
 		$conexao=$c->conexao();
 
@@ -14,7 +14,7 @@ class categorias{
 	}
 
 
-	public function atualizarCategoria($dados){
+	public function atualizarCategoria($dados){ // essa function atualiza as categorias ja existentes no site
 		$c = new conectar();
 		$conexao=$c->conexao();
 
@@ -26,7 +26,7 @@ class categorias{
 	}
 
 
-	public function excluirCategoria($idcategoria){
+	public function excluirCategoria($idcategoria){ // essa function exclui uma determinada categoria do site da qual voce escolher
 		$c = new conectar();
 		$conexao=$c->conexao();
 		

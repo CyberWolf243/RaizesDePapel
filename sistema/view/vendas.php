@@ -17,6 +17,7 @@
 		 <h1>Venda de Produtos</h1>
 		 <div class="row">
 		 	<div class="col-sm-12">
+                            
 		 		<span class="btn btn-default" id="vendaProdutosBtn">Vender Produto</span>
 		 		<span class="btn btn-default" id="vendasFeitasBtn">Lista de Vendas</span>
 		 	</div>

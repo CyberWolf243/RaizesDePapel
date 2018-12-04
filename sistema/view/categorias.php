@@ -14,9 +14,12 @@ if(isset($_SESSION['usuario'])){
 	<body>
 
 		<div class="container">
+                    
 			<h1>Categorias</h1>
 			<div class="row">
 				<div class="col-sm-4">
+                                    
+     <!-- FORMULARIO DA PAGINA DE CATEGORIA  -->
 					<form id="frmCategorias">
 						<label>Categoria</label>
 						<input type="text" class="form-control input-sm" name="categoria" id="categoria">

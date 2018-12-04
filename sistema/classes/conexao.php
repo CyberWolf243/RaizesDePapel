@@ -1,5 +1,7 @@
 <?php 
 
+// essa classe realiza a conexao do site com o banco de dados
+
 class conectar{
 	private $servidor = "localhost";
 	private $usuario = "root";

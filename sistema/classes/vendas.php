@@ -1,7 +1,7 @@
 <?php 
 
 class vendas{
-	public function obterDadosProduto($idproduto){
+	public function obterDadosProduto($idproduto){ // essa function captura os dados de um determinado produto ja cadastrado
 		$c= new conectar();
 		$conexao=$c->conexao();
 
@@ -34,7 +34,7 @@ class vendas{
 		return $dados;
 	}
 
-	public function criarVenda(){
+	public function criarVenda(){ // essa function realiza a criaçao da venda 
 		$c= new conectar();
 		$conexao=$c->conexao();
 
@@ -48,7 +48,7 @@ class vendas{
 			$d=explode("||", $dados[$i]);
 
 			$sql="INSERT into vendas (id_venda,
-										id_cliente,
+										id_fornecedor,
 										id_produto,
 										id_usuario,
 										preco,
@@ -77,7 +77,7 @@ class vendas{
 		return $r;
 	}
 
-	public function criarComprovante(){
+	public function criarComprovante(){ // essa function cria o comprovante de um determinada venda
 		$c= new conectar();
 		$conexao=$c->conexao();
 
@@ -94,15 +94,15 @@ class vendas{
 	}
         
  // --------------------------------------------------------------------------------------------------------------------
-        //alterar ao invez de encontrar cliente encontra funcionario
-	public function nomeCliente($idCliente){
+        //alterar ao invez de encontrar Fornecedor encontra funcionario
+	public function nomeFornecedor($id_fornecedor){
 		$c= new conectar();
 		$conexao=$c->conexao();
 
 
 		 $sql="SELECT sobrenome,nome 
-			from clientes 
-			where id_cliente='$idCliente'";
+			from fornecedores 
+                        where id_fornecedor='$id_fornecedor'";
 		$result=mysqli_query($conexao,$sql);
 
 		$ver=mysqli_fetch_row($result);
@@ -110,7 +110,7 @@ class vendas{
 		return $ver[1]." ".$ver[0];
 	}
 
-	public function obterTotal($idvenda){
+	public function obterTotal($idvenda){ // essa function obtem o valor total de uma determinada venda
 		$c= new conectar();
 		$conexao=$c->conexao();
 

@@ -23,6 +23,7 @@
 	<script src="lib/jquery-3.2.1.min.js"></script>
 	<script src="js/funcoes.js"></script>
 </head>
+
 <body style="background-color: gray">
 	<br><br><br>
 	<div class="container">

@@ -2,7 +2,7 @@
 
 <?php 
 	class produtos{
-		public function addImagem($dados){
+		public function addImagem($dados){ // essa function serve para inserir a imagem ao produto
 			$c= new conectar();
 			$conexao=$c->conexao();
 
@@ -20,7 +20,7 @@
 
 			return mysqli_insert_id($conexao);
 		}
-		public function inserirProduto($dados){
+		public function inserirProduto($dados){ // essa function adiciona um novo produto ao site
 			$c= new conectar();
 			$conexao=$c->conexao();
 
@@ -47,7 +47,7 @@
 
 
 
-		public function obterDados($idproduto){
+		public function obterDados($idproduto){ // essa function pega os dados de um determinado livro ja cadastrado no site
 			$c= new conectar();
 			$conexao=$c->conexao();
 
@@ -77,7 +77,7 @@
 
 
 
-		public function atualizar($dados){
+		public function atualizar($dados){ // essa function atualiza os dados de um determinado produto que ja foi inserido
 			$c= new conectar();
 			$conexao=$c->conexao();
 
@@ -93,7 +93,7 @@
 
 
 
-		public function excluir($idproduto){
+		public function excluir($idproduto){ // essa function exclui um determinado livro que ja foi inserido no site
 			$c= new conectar();
 			$conexao=$c->conexao();
 

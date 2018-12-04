@@ -1,7 +1,7 @@
 <?php 
 
 class usuarios{
-	public function registroUsuario($dados){
+	public function registroUsuario($dados){ // essa function cadastra um novo usuario para o site
 		$c = new conectar();
 		$conexao=$c->conexao();
 
@@ -13,8 +13,8 @@ class usuarios{
 	}
 
 
-
-	public function login($dados){
+// essa function captrua os dados qu foram inseridos pelo usuario e compara com o banco para saber se sao validos e ja existentes no banco
+	public function login($dados){ 
 			$c = new conectar();
 		$conexao=$c->conexao();
 
@@ -39,7 +39,7 @@ class usuarios{
 	}
 
 
-	public function trazerId($dados){
+	public function trazerId($dados){ // essa function captura o id de um determinado usuario do qual ja esta registrado
 		$c = new conectar();
 		$conexao=$c->conexao();
 
@@ -50,7 +50,7 @@ class usuarios{
 		return mysqli_fetch_row($result)[0];
 	}
 
-	public function obterDados($idusuario){
+	public function obterDados($idusuario){ // essa function pega todos os dados de um determinado usuario utilizando a id dele
 
 			$c = new conectar();
 			$conexao=$c->conexao();
@@ -77,7 +77,7 @@ class usuarios{
 			return $dados;
 		}
 
-		public function atualizar($dados){
+		public function atualizar($dados){ // essa function atualiza os dados de um determinado usuario ja cadastrado no site
 			$c = new conectar();
 			$conexao=$c->conexao();
 
@@ -91,7 +91,7 @@ class usuarios{
 			return mysqli_query($conexao,$sql);	
 		}
 
-		public function excluir($idusuario){
+		public function excluir($idusuario){ // essa function excluir um determinado usuario ja cadastrado no ste
 			$c = new conectar();
 			$conexao=$c->conexao();
 

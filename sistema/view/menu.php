@@ -5,33 +5,39 @@
 <html>
 <head>
   <title></title>
+  
 </head>
-<body>
+<body>      
+    
 
-  <!-- Begin Navbar -->
-  <div id="nav">
-    <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100">
+  <!-- MENU Navbar -->
+    
+  <div class="container" id="nav" >   <!-- class=container - arruma o tamanho do menu -->
+  <div class="navbar navbar-inverse " data-spy="affix" data-offset-top="100">
+    
       <div class="container">
         <div class="navbar-header">
+            
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="inicio.php"><img class="img-responsive logo img-thumbnail" src="../img/arvore1.png" alt="" width="190px" height="150px"></a>
-        </div>
+          </button> </div>
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav navbar-right">
-
+                                
+            <!-- class="glyphicon glyphicon-home" - adiciona o icone da casinha  -->
             <li class="active"><a href="inicio.php"><span class="glyphicon glyphicon-home"></span> Inicio</a>
             </li>
 
             
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Gestão Produtos <span class="caret"></span></a>
+           
+            <!-- class="glyphicon glyphicon-list-alt" - adiciona o icone da lista  -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Gerenciamento Produtos <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="categorias.php">Categorias</a></li>
               <li><a href="produtos.php">Produtos</a></li>
@@ -41,9 +47,10 @@
 
        
           <li class="dropdown">
+            
+            <!-- class="glyphicon glyphicon-user" - adiciona o icone de bonequinho de usuario  -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Pessoas <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="clientes.php">Clientes</a></li>
               <li><a href="fornecedores.php">Fornecedores</a></li>
             </ul>
           </li>
@@ -51,19 +58,24 @@
 
 
 
-         
+          <!-- class="glyphicon glyphicon-usd" - adiciona o icone de cifrao de dinheiro  -->         
           <li><a href="vendas.php"><span class="glyphicon glyphicon-usd"></span> Vendas</a>
           </li>
           
           <li class="dropdown" >
+          
+            <!-- class="glyphicon glyphicon-user" - adiciona o icone de bonequinho de usuario  -->             
             <a href="#" style="color: red"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario:   <span class="caret"></span></a>
             <ul class="dropdown-menu">
 
 
               <?php if($_SESSION['usuario'] == "admin"): ?>
+            
+            <!-- class="glyphicon glyphicon-off" - adiciona o icone do botaozinho de desligar[off]  -->  
             <li> <a href="usuarios.php"><span class="glyphicon glyphicon-off"></span> Gestão Usuários</a></li>
           <?php endif; ?>
 
+              <!-- class="glyphicon glyphicon-off" - adiciona o icone do botaozinho de desligar[off]  -->  
               <li> <a style="color: red" href="../procedimentos/sair.php"><span class="glyphicon glyphicon-off"></span> Sair</a></li>
               
             </ul>

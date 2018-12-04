@@ -6,7 +6,7 @@
 	
 	$obj= new vendas();
 
-	
+	// temp de "temporaria"
 
 	if(count($_SESSION['tabelaComprasTemp'])==0){
 		echo 0;

@@ -16,6 +16,8 @@ if(isset($_SESSION['usuario'])){
 			<h1>Fornecedores</h1>
 			<div class="row">
 				<div class="col-sm-4">
+                                    
+     <!-- FORMULARIO DA PAGINA DE FORNECEDOR  -->
 					<form id="frmFornecedores">
 						<label>Nome</label>
 						<input type="text" class="form-control input-sm" id="nome" name="nome">
@@ -27,8 +29,8 @@ if(isset($_SESSION['usuario'])){
 						<input type="text" class="form-control input-sm" id="email" name="email">
 						<label>Telefone</label>
 						<input type="text" class="form-control input-sm" id="telefone" name="telefone">
-						<label>CPF</label>
-						<input type="text" class="form-control input-sm" id="cpf" name="cpf">
+						<label>cnpj</label>
+						<input type="text" class="form-control input-sm" id="cnpj" name="cnpj">
 						<p></p>
 						<span class="btn btn-primary" id="btnAdicionarFornecedores">Salvar</span>
 					</form>
@@ -63,8 +65,8 @@ if(isset($_SESSION['usuario'])){
 							<input type="text" class="form-control input-sm" id="emailU" name="emailU">
 							<label>Telefone</label>
 							<input type="text" class="form-control input-sm" id="telefoneU" name="telefoneU">
-							<label>CPF</label>
-							<input type="text" class="form-control input-sm" id="cpfU" name="cpfU">
+							<label>cnpj</label>
+							<input type="text" class="form-control input-sm" id="cnpjU" name="cnpjU">
 						</form>
 					</div>
 					<div class="modal-footer">
@@ -98,7 +100,7 @@ if(isset($_SESSION['usuario'])){
 					$('#enderecoU').val(dado['endereco']);
 					$('#emailU').val(dado['email']);
 					$('#telefoneU').val(dado['telefone']);
-					$('#cpfU').val(dado['cpf']);
+					$('#cnpjU').val(dado['cnpj']);
 
 
 

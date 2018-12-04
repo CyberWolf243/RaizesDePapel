@@ -9,17 +9,35 @@
 
 <!DOCTYPE html>
 <html>
+
+
+ 
+
+
 <head>
 	<title>Início</title>
-	<?php require_once "menu.php" ?>
 </head>
 <body>
+ 	<div class="container">
+           
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-5">
+    <IMG src="../img/arvore1.png">
 
+                </div>
+        </div>
+        	<?php require_once "menu.php" ?>
+            <!-- fim cor do fundo -->
+
+
+                    
 
 <div id="vendasFeitas"></div>
 
+            
+                         
+    </body>
 
-</body>
 </html>
 
 
@@ -29,6 +47,7 @@
 }
 
  ?>
+
 
 <script type="text/javascript">
 		$(document).ready(function(){
